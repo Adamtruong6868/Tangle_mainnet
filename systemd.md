@@ -7,6 +7,17 @@ Port	30333 - P2P
 9933 - RPC
 9615 - Prometh
 OS	Ubuntu 22.04
+## Recommended Hardware Requirements
+
+|   SPEC      |       Recommend          |
+| :---------: | :-----------------------:|
+|   **CPU**   |        8 Cores           |
+|   **RAM**   |        16 GB             |
+|   **SSD**   |        500 GB            |
+|   **Port**  | |
+|   **P2P**  | 30333|
+|   **RPC**  | 9933|
+|   **Prometh**  | 9615|
 # 2. Update & install the necessary utilities
 ### Change Your-name
 ```
