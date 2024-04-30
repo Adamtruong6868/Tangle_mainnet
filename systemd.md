@@ -127,4 +127,3 @@ https://telemetry.polkadot.io/#list/0x624a09c9b7446ecd3ef5a00fb6a0554be1cd6e4472
 
 https://polkadot.js.org/apps/?rpc=wss://testnet-rpc.tangle.tools#/explorer
 
-systemctl stop tangle
