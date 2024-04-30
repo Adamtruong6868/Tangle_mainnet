@@ -17,7 +17,7 @@ apt update && apt upgrade -y
 apt install curl iptables build-essential git wget jq make gcc nano tmux htop nvme-cli pkg-config libssl-dev libleveldb-dev libgmp3-dev tar clang bsdmainutils ncdu unzip llvm libudev-dev make protobuf-compiler -y
 ```
 
-# 3. Download binaries files & creat tangle service
+# 3. Download binaries files
 ```
 mkdir -p $HOME/.tangle && cd $HOME/.tangle
 wget -O tangle https://github.com/webb-tools/tangle/releases/download/v1.0.1-rc1/tangle-testnet-linux-amd64
@@ -28,6 +28,8 @@ tangle --version
 ```
 
 ### **Result should be**: tangle 1.0.0-6855ead-x86_64-linux-gnu
+
+# 4. create tangle service
 
 ```
 sudo tee /etc/systemd/system/tangle.service > /dev/null << EOF
@@ -57,7 +59,7 @@ EOF
 systemctl daemon-reload
 systemctl enable tangle
 ```
-# 4. Add keys
+# 5. Add keys
 
 **Account keys
 Acco**
@@ -109,19 +111,19 @@ tangle key insert --base-path $HOME/.tangle/data/ \
 cd $Home
 ls .tangle/data/chains/tangle-testnet/keystore
 ```
-**5. Run service & check logs**
+**6. Run service & check logs**
 ```
 systemctl restart tangle && journalctl -u tangle -f -o cat
 ```
-**6. get your session key**
+**7. get your session key**
 ```
 curl -H "Content-Type: application/json" -d '{ "id": 1, "jsonrpc": "2.0", "method": "author_rotateKeys", "params": [] }' http://localhost:9944
 ```
-**7. Telemetry:**
+**8. Telemetry:**
 
 https://telemetry.polkadot.io/#list/0x624a09c9b7446ecd3ef5a00fb6a0554be1cd6e4472da050bd45a2a61c62d96c2
 
-**8. Explorer**
+**9. Explorer**
 
 https://polkadot.js.org/apps/?rpc=wss://testnet-rpc.tangle.tools#/explorer
 
