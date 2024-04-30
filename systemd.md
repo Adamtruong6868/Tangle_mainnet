@@ -11,7 +11,8 @@ OS	Ubuntu 22.04
 ### Change Your-name
 ```
 MONIKER=VNBnode
-
+```
+```
 apt update && apt upgrade -y
 apt install curl iptables build-essential git wget jq make gcc nano tmux htop nvme-cli pkg-config libssl-dev libleveldb-dev libgmp3-dev tar clang bsdmainutils ncdu unzip llvm libudev-dev make protobuf-compiler -y
 ```
