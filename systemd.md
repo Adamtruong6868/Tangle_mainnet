@@ -26,9 +26,9 @@ chmod 744 tangle
 mv tangle /usr/bin/
 tangle --version
 ```
-```
-# **Result should be**: tangle 1.0.0-6855ead-x86_64-linux-gnu
-```
+
+### **Result should be**: tangle 1.0.0-6855ead-x86_64-linux-gnu
+
 ```
 sudo tee /etc/systemd/system/tangle.service > /dev/null << EOF
 [Unit]
